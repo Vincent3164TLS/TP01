@@ -9,8 +9,8 @@ void printTime() {
         double time = (double)(current - start) / CLOCKS_PER_SEC;
 
         printf("temps depuis activation: %.2f seconds\n", time);
+   while ((double)(clock() - current) / CLOCKS_PER_SEC < 1.0) {}
 
-        while ((double)(clock() - current) / CLOCKS_PER_SEC < 1.0) {}
     }
 }
 
